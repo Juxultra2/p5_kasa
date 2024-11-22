@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo_kasa from '../assets/svg/logo_kasa.svg';
 
 
@@ -8,10 +9,10 @@ function Header() {
             <img src={logo_kasa} alt="Logo du site" />
             <ul>
                 <li>
-                    Accueil
+                    <Link to="/">Accueil</Link>
                 </li>
                 <li>
-                    A Propos
+                    <Link to="/about">À Propos</Link>
                 </li>
             </ul>
         </header>

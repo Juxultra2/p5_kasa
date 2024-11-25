@@ -1,6 +1,6 @@
 import React from 'react';
 import logo_kasablanc from '../assets/svg/logo_kasablanc.svg';
-
+import '../assets/styles/components/footer.scss'; // Pour le style
 
 function Footer() {
     return (

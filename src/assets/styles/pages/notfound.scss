@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.the404 {
+    color: $rouge-saumon;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        font-family: Montserrat, sans-serif;
+        font-size: 288px;
+        font-weight: 700;
+        line-height: 410.69px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin: 50px 0;
+    }
+    p {
+        font-family: Montserrat, sans-serif;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51.34px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        text-align: center;
+    }
+    a {
+        color: $noir;
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        text-align: center;
+        margin: 100px 0;
+    }
+}

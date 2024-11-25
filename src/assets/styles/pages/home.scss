@@ -1,3 +1,50 @@
+// insertion variables de couleurs
+@import '../variables.scss';
 
+.home {
+
+    &-contenu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 80px 40px;
+
+        &-banner {
+            // url : insérer une image en scss, de cette manière elle n'est pas lu par les lecteurs d'écran
+            // linear-gradient : background de couleur noir avec une certaine opacité pour foncer l'image en dessous
+            background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('../../images/bannerImg.jfif') no-repeat center;
+            background-size: cover;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            height: 223px;
+            top: 163px;
+            left: 100px;
+            gap: 0px;
+            border-radius: 25px;
+            opacity: 0.6px;
+            display: flex;
+            margin-bottom: 40px;
+    
+            h1 {
+                color: $blanc;
+                font-family: Montserrat, sans-serif;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &-logements {
+            background-color: $background-cards;
+            border-radius: 25px;
+            padding: 50px;
+        }
+    } 
+}
 
 

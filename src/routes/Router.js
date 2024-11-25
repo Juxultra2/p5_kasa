@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import NotFound from '../pages/NotFound';
+import LogementDetails from '../pages/LogementDetails';
 
 const AppRouter = () => {
     return (
@@ -12,6 +13,9 @@ const AppRouter = () => {
         <Routes>
         {/* Page d'accueil */}
         <Route path="/" element={<Home />} />
+        
+        {/* Page de la fiche logement  */}
+        <Route path="/logement/:id" element={<LogementDetails />} />
 
         {/* Page À propos */}
         <Route path="/about" element={<About />} />

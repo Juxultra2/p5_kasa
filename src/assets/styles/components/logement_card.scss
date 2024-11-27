@@ -1,5 +1,4 @@
-// insertion variables de couleurs
-@import '../variables.scss';
+@import '../app.scss';
 
 .logementCards {
     display: flex;
@@ -36,7 +35,6 @@
         h2 {
             //color: $blanc;
             color: $blanc;
-            font-family: Montserrat, sans-serif;
             font-size: 18px;
             font-weight: 700;
             line-height: 25.67px;

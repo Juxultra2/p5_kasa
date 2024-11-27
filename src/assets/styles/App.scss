@@ -1,3 +1,6 @@
+@import './variables.scss'; // insertion variables de couleurs
+@import './fonts.scss';
+
 * {
   margin: 0;
   font-family: Montserrat, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,7 +16,9 @@
 }
 
 
-
+ul {
+  padding-inline-start: 0;
+}
 
 
 

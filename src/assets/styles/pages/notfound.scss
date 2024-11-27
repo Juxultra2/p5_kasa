@@ -1,11 +1,10 @@
-@import '../variables.scss';
+@import '../app.scss';
 
 .the404 {
     color: $rouge-saumon;
     display: flex;
     flex-direction: column;
     h1 {
-        font-family: Montserrat, sans-serif;
         font-size: 288px;
         font-weight: 700;
         line-height: 410.69px;
@@ -15,7 +14,6 @@
         margin: 50px 0;
     }
     p {
-        font-family: Montserrat, sans-serif;
         font-size: 36px;
         font-weight: 500;
         line-height: 51.34px;
@@ -26,7 +24,6 @@
     }
     a {
         color: $noir;
-        font-family: Montserrat, sans-serif;
         font-size: 18px;
         font-weight: 500;
         line-height: 25.67px;

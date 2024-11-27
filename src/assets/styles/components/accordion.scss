@@ -1,0 +1,44 @@
+@import '../app.scss';
+
+.accordion {
+    .accordion-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        background-color: $rouge-saumon;
+        border-radius: 8px;
+        height: 52px;
+        padding: 0 15px;
+
+        h3 {
+            color: $blanc;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+    
+        img.arrow {
+            transition: transform 0.3s ease-out; /* Animation de rotation */
+            transform: rotate(90deg);
+
+    
+            &.down {
+                transform: rotate(-90deg); /* Fais pivoter l'icône lorsqu'elle est ouverte */
+            }
+        }
+    }
+    
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        
+        &.open {
+            max-height: 500px; /* Ajuste selon ton contenu */
+            background-color: $background-cards;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    }
+}

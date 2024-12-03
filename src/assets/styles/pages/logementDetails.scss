@@ -4,10 +4,44 @@
     margin: 50px 80px 80px 80px;
 
     &-carrousel {
-        max-height: 415px;
+        position: relative; // Pour positionner les boutons
+        width: 100%;
+        height: 415px;      /* Hauteur fixe du conteneur */
+        display: flex;      /* Centre le contenu */
+        justify-content: center; /* Horizontalement */
+        align-items: center;    /* Verticalement */
+        overflow: hidden;   /* Cache le surplus si nécessaire */
+        border-radius: 25px;
         img {
-            height: 100%;
-            max-height: 415px;
+            width: 100%;        /* Prend toute la largeur */
+            height: auto; 
+            
+        }
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0); // Fond transparent
+            position: absolute;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            padding: 205px 50px 205px 30px;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+                }
+        }
+        .prev {
+            left: 0; // Distance par rapport au bord gauche
+        }
+        .next {
+            right: 0; // Distance par rapport au bord droit
+        }
+        .carousel-indicator {
+            position: absolute;
+            bottom: 30px; // Distance par rapport au bas
+            left: 50%; // Centrer horizontalement
+            color: $blanc;
+            font-size: 18px;
+            font-weight: 500;
         }
     }
 
@@ -18,6 +52,7 @@
         &-top {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 25px;
             &-gauche {
                 h2 {
                     color: $rouge-saumon;
@@ -52,6 +87,40 @@
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    margin-bottom: 20px;
+                    justify-content: flex-end;
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $rouge-saumon;
+                        max-width: 93px;
+                        text-align: right;
+                    }
+                    img {
+                        height: 64px;
+                        width: 64px;
+                        border-radius: 50%;
+                        margin-left: 15px;
+                    }
+                }
+                &-rating {
+                    display: flex;
+                    gap: 5px; // Espacement entre les étoiles
+                    margin-top: 5px;
+                    justify-content: flex-end;
+                    .star {
+                        width: 25px; // Ajuste la taille
+                        height: 25px; // Ajuste la taille
+                        margin-left: 10px;
+                
+                        &.red {
+                            fill: $rouge-saumon; // Rouge-saumon pour les étoiles actives
+                        }
+                
+                        &.gray {
+                            fill: #E3E3E3; // Gris clair pour les étoiles inactives
+                        }
+                    }
                 }
             }
         }
@@ -60,6 +129,16 @@
             justify-content: space-between;
             .accordion {
                 width: 47%;
+                &-content {
+                    p {
+                        font-size: 18px;
+                    }
+                    ul {
+                        li {
+                            font-size: 18px;
+                        }
+                    }
+                }
             }
         }
     }

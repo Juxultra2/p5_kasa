@@ -6,7 +6,30 @@ import Footer from '../components/Footer';
 import Accordion from '../components/Accordion';
 import PrevIcon from '../assets/svg/vector-prev.svg';
 import NextIcon from '../assets/svg/vector-next.svg';
+import EtoileRouge from '../assets/svg/etoile_red.svg';
+import EtoileGrise from '../assets/svg/etoile_gray.svg';
 import '../assets/styles/pages/logementDetails.scss'; // Pour le style
+
+
+
+function generateStars(rating) {
+    const totalStars = 5; // Total d'étoiles
+    const stars = [];
+
+    for (let i = 1; i <= totalStars; i++) {
+        stars.push(
+            <img
+                key={i}
+                src={i <= rating ? EtoileRouge : EtoileGrise}
+                alt="Étoile"
+                className="star"
+            />
+        );
+    }
+
+    return stars;
+}
+
 
 function LogementDetails() {
     // Récupération de l'id du logement dans l'URL
@@ -51,6 +74,10 @@ function LogementDetails() {
                     <button onClick={nextImage} className="carousel-button next">
                         <img src={NextIcon} alt="Suivant" className="carousel-icon" />
                     </button>
+                    {/* Indicateur d'index */}
+                    <div className="carousel-indicator">
+                        {currentImageIndex + 1}/{logement.pictures.length}
+                    </div>
                 </div>
 
                 {/* Informations sur le logement */}
@@ -68,13 +95,11 @@ function LogementDetails() {
                         <div className="logementDetails-fiche-info-top-droite">
                             <div className="logementDetails-fiche-info-top-droite-profil">
                                 <p>{logement.host.name}</p>
-                                <img
-                                    src={logement.host.picture}
-                                    alt={logement.host.name}
-                                    className="host-pictures"
-                                />
+                                <img src={logement.host.picture} alt={logement.host.name} className="host-pictures" />
                             </div>
-                            <p>Rating: {logement.rating}</p>
+                            <div className="logementDetails-fiche-info-top-droite-rating">
+                                {generateStars(parseInt(logement.rating))}
+                            </div>
                         </div>
                     </div>
                     <div className="logementDetails-fiche-info-accordion">

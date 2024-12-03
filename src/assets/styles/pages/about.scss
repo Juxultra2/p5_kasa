@@ -1,7 +1,7 @@
 @import '../app.scss';
 
 .a_propos {
-    margin: 0 80px ;
+    margin: 0 80px 40px;
     &-banner {
         background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../images/montagne_banner.jfif') no-repeat center;
         background-size: cover;

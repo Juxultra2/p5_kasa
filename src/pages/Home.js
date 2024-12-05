@@ -12,7 +12,7 @@ function Home() {
             <section className="home-contenu">
                 {/* Bannière */}
                 <div className="home-contenu-banner">
-                    <h1>Chez vous, partout et ailleurs</h1>
+                    <h1>Chez vous, partout&nbsp;et&nbsp;ailleurs</h1>
                 </div>
                 <div className="home-contenu-logements">
                     <Logement_card />

@@ -4,8 +4,11 @@ import logementsData from '../logements.json'; // Import du fichier JSON local
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Accordion from '../components/Accordion';
+import NotFound from '../pages/NotFound';
 import PrevIcon from '../assets/svg/vector-prev.svg';
 import NextIcon from '../assets/svg/vector-next.svg';
+import PrevIcon_mobile from '../assets/svg/vector_mobile-prev.svg';
+import NextIcon_mobile from '../assets/svg/vector_mobile-next.svg';
 import EtoileRouge from '../assets/svg/etoile_red.svg';
 import EtoileGrise from '../assets/svg/etoile_gray.svg';
 import '../assets/styles/pages/logementDetails.scss'; // Pour le style
@@ -43,7 +46,7 @@ function LogementDetails() {
 
     // Si le logement n'est pas trouvé
     if (!logement) {
-        return <p>Logement non trouvé</p>;
+        return <NotFound /> ;
     }
 
     const nextImage = () => {
@@ -65,6 +68,8 @@ function LogementDetails() {
                 <div className="logementDetails-fiche-carrousel">
                     <button onClick={prevImage} className="carousel-button prev">
                         <img src={PrevIcon} alt="Précédent" className="carousel-icon" />
+                        {/* Img pour les mobiles */}
+                        <img src={PrevIcon_mobile} alt="Précédent" className="carousel-icon_mobile" />
                     </button>
                     <img
                         src={logement.pictures[currentImageIndex]}
@@ -73,6 +78,8 @@ function LogementDetails() {
                     />
                     <button onClick={nextImage} className="carousel-button next">
                         <img src={NextIcon} alt="Suivant" className="carousel-icon" />
+                        {/* Img pour les mobiles */}
+                        <img src={NextIcon_mobile} alt="Suivant" className="carousel-icon_mobile" />
                     </button>
                     {/* Indicateur d'index */}
                     <div className="carousel-indicator">

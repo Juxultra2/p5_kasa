@@ -5,11 +5,20 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 40px;
-    // link
+    @media (max-width: 855px) {
+        max-width: 650px;
+        gap: 20px;
+    }
+
+    //link
     &-card {
         position: relative; /* pour que absolute se positionne par rapport à la carte */
         width: 340px;
         height: 340px;
+        @media (max-width: 855px) {
+            width: 335px;
+            height: 255px;
+        }
         // image
         &-cover {
             width: 100%;

@@ -6,7 +6,7 @@ import '../assets/styles/pages/about.scss'; // Pour le style
 
 function About() {
     return (
-        <section className="notFound">
+        <section className="about">
             <Header />
 
             {/* comentaire */}

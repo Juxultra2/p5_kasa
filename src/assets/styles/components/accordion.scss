@@ -10,6 +10,9 @@
         border-radius: 8px;
         height: 52px;
         padding: 0 15px;
+        @media (max-width: 855px) {
+            height: 30px;
+        }
 
         h3 {
             color: $blanc;
@@ -17,14 +20,24 @@
             font-weight: 700;
             letter-spacing: 0.5px;
         }
-    
         img.arrow {
             transition: transform 0.3s ease-out; /* Animation de rotation */
             transform: rotate(90deg);
-
-    
+            @media (max-width: 855px) {
+                display: none;
+            }
             &.down {
                 transform: rotate(-90deg); /* Fais pivoter l'icône lorsqu'elle est ouverte */
+            }
+        }
+        img.arrow_mobile {
+            display: none;
+            transition: transform 0.3s ease-out; /* Animation de rotation */
+            &.down {
+                transform: rotate(-180deg); /* Fais pivoter l'icône lorsqu'elle est ouverte */
+            }
+            @media (max-width: 855px) {
+                display: block;
             }
         }
     }

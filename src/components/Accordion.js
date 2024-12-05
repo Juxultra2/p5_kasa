@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/styles/components/accordion.scss';
 import ArrowIcon from '../assets/svg/arrow_back_ios.svg';
+import ArrowIcon_mobile from '../assets/svg/arrow_back_ios_mobile.svg';
 
 const Accordion = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,11 @@ const Accordion = ({ title, children }) => {
                 src={ArrowIcon} 
                 alt="Icone de fléche" 
                 className={`arrow ${isOpen ? 'down' : ''}`} 
+                />
+                <img 
+                src={ArrowIcon_mobile} 
+                alt="Icone de fléche" 
+                className={`arrow_mobile ${isOpen ? 'down' : ''}`} 
                 />
             </div>
             <div className={`accordion-content ${isOpen ? 'open' : ''}`}>

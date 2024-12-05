@@ -90,3 +90,5 @@ cour :  https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7135204
 
 
 Scénario : https://openclassrooms.com/fr/paths/899/projects/1247/scenario
+
+S'il n'y a qu'une seule image, les boutons "Suivant" et "Précédent" ainsi que la numérotation n'apparaissent pas.

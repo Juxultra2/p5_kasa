@@ -59,6 +59,8 @@ function LogementDetails() {
         );
     };
 
+    const hasMultipleImages = logement.pictures.length > 1; // Vérifie s'il y a plusieurs images
+    
     return (
         <section className="logementDetails">
             <Header />
@@ -66,25 +68,31 @@ function LogementDetails() {
             <section className="logementDetails-fiche">
                 {/* Carrousel */}
                 <div className="logementDetails-fiche-carrousel">
-                    <button onClick={prevImage} className="carousel-button prev">
-                        <img src={PrevIcon} alt="Précédent" className="carousel-icon" />
-                        {/* Img pour les mobiles */}
-                        <img src={PrevIcon_mobile} alt="Précédent" className="carousel-icon_mobile" />
-                    </button>
+                    {hasMultipleImages && (
+                        <button onClick={prevImage} className="carousel-button prev">
+                            <img src={PrevIcon} alt="Précédent" className="carousel-icon" />
+                            {/* Img pour les mobiles */}
+                            <img src={PrevIcon_mobile} alt="Précédent" className="carousel-icon_mobile" />
+                        </button>
+                    )}
                     <img
                         src={logement.pictures[currentImageIndex]}
                         alt={logement.title}
                         className="logement-pictures"
                     />
-                    <button onClick={nextImage} className="carousel-button next">
-                        <img src={NextIcon} alt="Suivant" className="carousel-icon" />
-                        {/* Img pour les mobiles */}
-                        <img src={NextIcon_mobile} alt="Suivant" className="carousel-icon_mobile" />
-                    </button>
+                    {hasMultipleImages && (
+                        <button onClick={nextImage} className="carousel-button next">
+                            <img src={NextIcon} alt="Suivant" className="carousel-icon" />
+                            {/* Img pour les mobiles */}
+                            <img src={NextIcon_mobile} alt="Suivant" className="carousel-icon_mobile" />
+                        </button>
+                    )}
                     {/* Indicateur d'index */}
-                    <div className="carousel-indicator">
-                        {currentImageIndex + 1}/{logement.pictures.length}
-                    </div>
+                    {hasMultipleImages && (
+                        <div className="carousel-indicator">
+                            {currentImageIndex + 1}/{logement.pictures.length}
+                        </div>
+                    )}
                 </div>
 
                 {/* Informations sur le logement */}

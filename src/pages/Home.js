@@ -9,13 +9,16 @@ function Home() {
         <section className="home">
             <Header />
 
-            {/* Bannière */}
-            <div className="home-banner">
-                <h1>Chez vous, partout et ailleurs</h1>
-            </div>
-            <div className="home-logment-card">
-                <Logement_card />
-            </div>
+            <section className="home-contenu">
+                {/* Bannière */}
+                <div className="home-contenu-banner">
+                    <h1>Chez vous, partout&nbsp;et&nbsp;ailleurs</h1>
+                </div>
+                <div className="home-contenu-logements">
+                    <Logement_card />
+                </div>
+            </section>
+            
             <Footer />
         </section>
     );

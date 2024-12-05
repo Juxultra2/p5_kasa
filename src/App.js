@@ -1,4 +1,4 @@
-import './assets/styles/App.scss';
+import './assets/styles/app.scss';
 import React from 'react';
 import AppRouter from './routes/Router';
 

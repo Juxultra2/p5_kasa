@@ -1,0 +1,244 @@
+@import '../app.scss';
+.logementDetails{
+    @media (max-width: 855px) {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .logementDetails-fiche {
+        margin: 50px 80px 80px 80px;
+        @media (max-width: 855px) {
+            margin: 0 0 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-carrousel {
+            position: relative; // Pour positionner les boutons
+            width: 100%;
+            height: 415px;      /* Hauteur fixe du conteneur */
+            display: flex;      /* Centre le contenu */
+            justify-content: center; /* Horizontalement */
+            align-items: center;    /* Verticalement */
+            overflow: hidden;   /* Cache le surplus si nécessaire */
+            border-radius: 25px;
+            @media (max-width: 855px) {
+                height: 255px;
+                width: 90%;
+            }
+            img {
+                width: 100%;        /* Prend toute la largeur */
+                height: auto; 
+                border-radius: 25px;
+                @media (max-width: 855px) {
+                    border-radius: 10px;
+                }
+            }
+            .logement-pictures {
+                @media (max-width: 855px) {
+                    height: 255px;
+                    //width: 90%;
+                    object-fit: cover;
+                }
+            }
+            .carousel-button {
+                background-color: rgba(0, 0, 0, 0); // Fond transparent
+                position: absolute;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                padding: 200px 20px;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+                .carousel-icon {
+                    @media (max-width: 855px) {
+                        display: none;
+                    }
+                }
+                .carousel-icon_mobile {
+                    display: none;
+                    @media (max-width: 855px) {
+                        display: block;
+                    }
+                }
+            }
+            .prev {
+                left: 0; // Distance par rapport au bord gauche
+            }
+            .next {
+                right: 0; // Distance par rapport au bord droit
+            }
+            .carousel-indicator {
+                position: absolute;
+                bottom: 30px; // Distance par rapport au bas
+                left: 50%; // Centrer horizontalement
+                color: $blanc;
+                font-size: 18px;
+                font-weight: 500;
+                @media (max-width: 855px) {
+                    display: none;
+                }
+            }
+        }
+    
+        &-info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            @media (max-width: 855px) {
+                width: 90%;
+            }
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                @media (max-width: 855px) {
+                    flex-direction: column;
+                    margin-bottom: 0;
+                }
+                &-gauche {
+                    h2 {
+                        color: $rouge-saumon;
+                        font-size: 36px;
+                        font-weight: 500;
+                        @media (max-width: 855px) {
+                            font-size: 18px;
+                        }
+                    }
+                    p {
+                        margin-top: 10px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        @media (max-width: 855px) {
+                            font-size: 14px;
+                            margin-top: 15px;
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 20px;
+                        @media (max-width: 855px) {
+                            margin-bottom: 25px;
+                        }
+                        li {
+                            color: $blanc;
+                            margin-right: 10px;
+                            background-color: $rouge-saumon;
+                            padding: 5px 30px;
+                            border-radius: 10px;
+                            font-size: 14px;
+                            font-weight: 700;
+                            letter-spacing: 0.5px;
+                            @media (max-width: 855px) {
+                                font-size: 10px;
+                                padding: 3px 20px;
+                                border-radius: 5px;
+                                letter-spacing: 0;
+                            }
+                        }
+                    }
+                }
+                &-droite {
+                    display: flex;
+                    flex-direction: column;
+                    @media (max-width: 855px) {
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                    }
+                    &-profil {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        justify-content: flex-end;
+                        p {
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: $rouge-saumon;
+                            max-width: 93px;
+                            text-align: right;
+                            @media (max-width: 855px) {
+                                font-size: 12px;
+                                max-width: 55px;
+                            }
+                        }
+                        img {
+                            height: 64px;
+                            width: 64px;
+                            border-radius: 50%;
+                            margin-left: 15px;
+                            @media (max-width: 855px) {
+                                height: 32px;
+                                width: 32px;
+                            }
+                        }
+                    }
+                    &-rating {
+                        display: flex;
+                        gap: 5px; // Espacement entre les étoiles
+                        margin-top: 5px;
+                        justify-content: flex-end;
+                        .star {
+                            width: 25px; // Ajuste la taille
+                            height: 25px; // Ajuste la taille
+                            margin-left: 10px;
+                            @media (max-width: 855px) {
+                                width: 18px;
+                                height: 18px;
+                                margin: 0 2px 0 0;
+                            }
+                    
+                            &.red {
+                                fill: $rouge-saumon; // Rouge-saumon pour les étoiles actives
+                            }
+                    
+                            &.gray {
+                                fill: #E3E3E3; // Gris clair pour les étoiles inactives
+                            }
+                        }
+                    }
+                }
+            }
+            &-accordion {
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: 855px) {
+                    flex-direction: column;
+                    gap: 25px;
+                }
+                .accordion {
+                    width: 47%;
+                    @media (max-width: 855px) {
+                        width: 100%;
+                    }
+                    &-header {
+                        h3 {
+                            @media (max-width: 855px) {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    &-content {
+                        p {
+                            font-size: 18px;
+                            @media (max-width: 855px) {
+                                font-size: 12px;
+                            }
+                        }
+                        ul {
+                            li {
+                                font-size: 18px;
+                                @media (max-width: 855px) {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

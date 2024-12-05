@@ -1,34 +1,36 @@
+@import './variables.scss'; // insertion variables de couleurs
+@import './fonts.scss';
 
-body {
+* {
   margin: 0;
   font-family: Montserrat, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   font-size: 12px;
   font-weight: 400;
-  line-height: 17.11px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+  list-style-type: none;
+  // box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+
+#root {
+  width: 100%;
+    max-width: 1800px;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+
+
 
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import '../assets/styles/pages/notFound.scss'; // Pour le style
+import '../assets/styles/pages/notfound.scss'; // Pour le style
 
 function NotFound() {
     return (
